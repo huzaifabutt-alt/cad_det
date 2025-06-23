@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CAD Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <img src="{{ url_for('static', filename='heart.png') }}" alt="Heart Image" />
+            <p class="credit">
+                Creation of - <a href="#"><i class="fab fa-github"></i> Huzaifa Butt</a> | <a href="https://github.com/huzaifabutt-alt/cad-detection">Model Source code</a>
+            </p>
+        </div>
+        <div class="text-section">
+            <h1>Coronary Artery Disease Detection System</h1>
+            <p>This is a Coronary Artery Disease detection System build using Deep learning</p>
+            <a href="{{ url_for('predict') }}"><button>Detect</button></a>
+        </div>
+    </div>
+</body>
+</html>
+{%endblock%}

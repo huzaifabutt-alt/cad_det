@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Normal Result{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result - Normal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container-center">
+        <h1 style="color: limegreen;">😊 You are Normal!</h1>
+        <a href="{{ url_for('predict') }}"><button>Detect For Other patient</button></a>
+    </div>
+    
+</body>
+</html>
+{%endblock%}
